@@ -3,7 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser=require('body-parser');
 var port = process.env.PORT || 8080;
-
+if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
 var routes = require('./routes/route');
 
 app.set('view engine', 'ejs');
@@ -17,18 +17,18 @@ app.get('/', function(req, res){
 //local db
 //var dbURI = 'mongodb://localhost/directory';
 //mongodb atlas cloud
-var dbURI = 'mongodb://rajmalakpet:rajmalakpet@cluster0-shard-00-00-otjuy.mongodb.net:27017,cluster0-shard-00-01-otjuy.mongodb.net:27017,cluster0-shard-00-02-otjuy.mongodb.net:27017/directory?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true';
+var dbURI = (process.env.NODE_ENV == "production") ? JSON.parse(process.env.dbURI) : process.env.dbURI;
 
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {
-    console.log('Mongoose connected to ' + dbURI);
+    //console.log('Mongoose connected to dbURI successfully');
 });
 mongoose.connection.on('error', function (err) {
-    console.log('Mongoose connection error: ' + err);
+    //console.log('Mongoose connection error: ' + err);
 });
 mongoose.connection.on('disconnected', function () {
-    console.log('Mongoose disconnected');
+    //console.log('Mongoose disconnected');
 });
 
 app.get('/getEmployees', routes.getEmployees);
@@ -37,5 +37,5 @@ app.post('/updateEmployee', routes.updateEmployee);
 app.post('/removeEmployee', routes.removeEmployee);
 
 app.listen(port, function(){
-    console.log('<=== app running on port: ', port);
+    //console.log('<=== app running on port: ', port);
 })
