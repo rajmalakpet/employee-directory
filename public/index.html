@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html ng-app="directory">
+
+<head>
+    <title>Employee Directory</title>
+    <link rel="icon" href="data:image/jpeg;base64,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" sizes="16x16" type="image/png">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Roboto';
+            font-size: 12px;
+        }
+        table tr th {
+            width: 12.5%;
+            text-align: center;
+        }
+        table tr td {
+            text-align: center;
+        }
+        .btn {
+            border-radius: 0px;
+        }
+    </style>
+</head>
+
+<body ng-controller="gblController">
+    <div class="container" style="background-color: #ac1a17">
+        <h4 style="color:#fff;">Employee Directory Demo (AngularJS + NodeJS-Express + MongoDB)</h4>
+    </div>
+    <br>
+    <div class="container">
+        <span>Add an Employee</span>
+        <table class="table">
+            <thead>
+                <tr>
+                    <form novalidate ng-submit="formSubmit()">
+                        <td><input type="text" class="form-control input-sm" ng-model="employee.name" ng-required="true" placeholder="Name"></td>
+                        <td><input type="text" class="form-control input-sm" ng-model="employee.email" ng-required="true" ng-disabled="editMode" placeholder="Email"></td>
+                        <td>
+                            <p class="input-group">
+                                <input type="text" class="form-control input-sm" uib-datepicker-popup ng-model="employee.dob"  ng-change="dateChanged()" is-open="popup2.opened" datepicker-options="dateOptions" placeholder="yyyy-mm-dd" ng-required="true" close-text="Close" />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default input-sm" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </td>
+                        <td><input type="text" class="form-control input-sm" ng-model="employee.department" ng-required="true" placeholder="Department"></td>
+                        <td><input type="text" class="form-control input-sm" ng-model="employee.gender" ng-required="true" placeholder="Gender"></td>
+                        <td><input type="text" class="form-control input-sm" ng-model="employee.age" ng-required="true" placeholder="Age" readonly></td>
+                        <td><button type="submit" class="btn btn-success btn-sm" ng-disabled="editMode">Add Employee</button></td>
+                        <td><button type="button" ng-click="updateEmployee()" class="btn btn-success btn-sm" ng-disabled="!editMode">Update Employee</button></td>
+                    </form>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <form class="form-inline" novalidate>
+                    <div class="form-group">
+                        <span>Find an Employee:</span>
+                        <input type="text" class="form-control input-sm" ng-model="findEmployee" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="enter a name ..." style="color:#ac1a17;border:1px solid #ac1a17;"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th>Department</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>(Update)</th>
+                    <th>(Remove)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in employeeList | filter: {name: findEmployee}">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.dob | date : 'yyyy-MM-dd'}}</td>
+                    <td>{{item.department}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>{{item.age}}</td>
+                    <td><button class="btn btn-info btn-sm" ng-click="editInfo(item)">Edit</button></td>
+                    <td><button class="btn btn-danger btn-sm" ng-click="deleteInfo(item)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <br>
+        <pre>{{ employee | json }}</pre> -->
+    </div>
+
+    <script>
+        var app = angular.module('directory', ['ui.bootstrap']);
+        app.controller('gblController', ['$scope', '$http', function($scope, $http){
+            $scope.editMode = false;
+            $scope.dateOptions = {
+                formatYear: 'yy',
+                maxDate: new Date(),
+                minDate: new Date(1950, 0, 01),
+                startingDay: 1
+            };
+
+            $scope.open2 = function() {
+                $scope.popup2.opened = true;
+            };
+            $scope.popup2 = {
+                opened: false
+            };
+
+            $scope.master = { name: '', email: '', dob: null, department: '', gender: '', age: '' }
+            $scope.employee = angular.copy($scope.master);
+
+            $scope.dateChanged = function(){
+                //console.log('date changed ', $scope.employee.dob);
+                var _cdate = $scope.employee.dob;
+                if (typeof(_cdate) !== "undefined" && _cdate !== "" && _cdate !== null) {
+                    var age = new Date().getFullYear() - $scope.employee.dob.getFullYear();
+                    //console.log('calculated age: ', age);
+                    $scope.employee.age = age;
+                }
+            }
+
+            $scope.employeeList = [];
+            $scope.formSubmit = function(){
+                //console.log('form submitted');
+                var error = false;
+                for(var x in $scope.employee){
+                    if($scope.employee[x] === ""){
+                        error = true;
+                    }
+                }
+                if (!error) {
+                    var _obj = angular.copy($scope.employee);
+                    $http.post('/addEmployee', _obj).then(function(response){
+                        //console.log('post addEmployee success: ', response)
+                        if (response.data.status == 400) {
+                            alert('Error occuried while saving: '+response.data.error);
+                        } else {
+                            $scope.init();                              //reload to show updated
+                        }
+                    }, function(error){
+                        //console.log('post addEmployee error: ', error)
+                        alert('Error occuried while saving error code: '+JSON.stringify(error));
+                    })
+                    $scope.employee = angular.copy($scope.master);
+                } else {
+                    alert('Please fill the form fields.');
+                }
+            }
+            $scope.updateEmployee = function(){
+                //console.log('updateEmployee clicked');
+                var error = false;
+                for(var x in $scope.employee){
+                    if($scope.employee[x] === ""){
+                        error = true;
+                    }
+                }
+                if (!error) {
+                    var _obj = angular.copy($scope.employee);
+                    $http.post('/updateEmployee', _obj).then(function(response){
+                        //console.log('post updateEmployee success: ', response)
+                        if (response.data.status == 400) {
+                            alert('Error occuried while saving: '+response.data.error);
+                        } else {
+                            $scope.init();                              //reload to show updated
+                        }
+                    }, function(error){
+                        //console.log('post updateEmployee error: ', error)
+                        alert('Error occuried while saving error code: '+JSON.stringify(error));
+                    })
+                    $scope.employee = angular.copy($scope.master);
+                    $scope.editMode = false;                            //reset for add Employee
+                } else {
+                    alert('Please fill the form fields.');
+                }
+            }
+
+            $scope.editInfo = function(_itemObj){
+                //console.log('editInfo called: ', _itemObj);
+                $scope.editMode = true;                                 //enable update Employee button
+                $scope.employee = _itemObj;
+                $scope.employee.dob = new Date(_itemObj.dob);           //dob is date format, string wont work
+            }
+
+            //delete the selected employee via index
+            $scope.deleteInfo = function(_itemObj){
+                //console.log('deleteInfo called: ', _itemObj);
+                var _email = _itemObj.email;
+                //console.log('unique email-object/item to be deleted: ', _email);
+                $http.post('/removeEmployee', {email: _email}).then(function(response){
+                    //console.log('post removeEmployee success: ', response)
+                    if (response.data.status == 400) {
+                        alert('Error occuried while deleting: '+response.data.error);
+                    } else {
+                        $scope.init();                              //reload to show updated
+                        alert('Selected employee data is deleted from database');
+                    }
+                }, function(error){
+                    //console.log('post removeEmployee error: ', error)
+                    alert('Error occuried while deleting error code: '+JSON.stringify(error));
+                })
+            }
+
+            //use below method to load saved employees
+            $scope.init = function(){
+                $http.get('/getEmployees').then(function(response){
+                    //console.log('get getEmployees success: ', response);
+                    if (response.data.status == 400) {
+                        alert('Unable to load the data: '+response.data.error)
+                    } else {
+                        $scope.employeeList = response.data.data;
+                    }
+                }, function(error){
+                    //console.log('http get getEmloyees failed: ', error)
+                    alert('Error occuried while laoding data: '+JSON.stringify(error))
+                })
+            }
+
+            $scope.findEmployee = "";
+
+            //run the init on load
+            $scope.init();
+        }]);
+    </script>
+
+</body>
+
+</html>
